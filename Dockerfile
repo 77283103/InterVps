@@ -18,9 +18,6 @@ RUN apt-get update \
     && curl -sSL https://github.com/docker/compose/releases/download/1.29.2/docker-compose-Linux-x86_64 -o /usr/local/bin/docker-compose \
     && chmod +x /usr/local/bin/docker-compose
 
-# Install JDK 1.8 and Maven 3.8
-RUN apt-get install -y openjdk-8-jdk maven
-
 # Download and set up noVNC
 RUN wget https://github.com/novnc/noVNC/archive/refs/tags/v1.2.0.tar.gz \
     && tar -xvf v1.2.0.tar.gz \
